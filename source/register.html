@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>register</title>
+            <link rel="stylesheet" type="text/css" href="main.css" >
+            <script>
+                function login(){
+                    alert("Registration is currently disabled..")
+                }
+            </script>
+        </head>
+        <body>
+            <div class="application-main" data-commit-hovercards-enabled data-discussion-hovercards-enabled data-issue-and-pr-hovercards-enabled >
+                <main id="main">
+                    <div class="auth-form px-3" id="login">
+                        <div class="auth-form-header p-0">
+                            <h1>Sign in to Business Database</h1>
+                        </div>
+                        <div class="auth-form-body mt-3">
+                            <form action="" method="post" accept-charset="UTF-8" id="form"></form>
+                            <label for="login-field" class="label">Username</label>
+                            <input type="username" id="username" class="form-control input-block" autocapitalize="off" autocorrect="off" autocomplete="username" autofocus="autofocus">
+                            <div></div>
+                            <label for="login-field" class="label">Email address</label>
+                            <input type="email" id="email" class="form-control input-block" autocapitalize="off" autocorrect="off" autocomplete="email" autofocus="autofocus">
+                            <div></div>
+                            <div class="position-relative password">
+                                <label for="password" class="label">Password</label>
+                                <input type="password"  id="password" class="form-control form-control input-block" autocomplete="current-password">
+                                <div></div>
+                                <input type="submit" id="signUp" name="submit" value=" Sign up " onclick="login()" class="btn btn-primary btn-block">
+                            </div>
+                        </div>
+                    </div> 
+                </main>
+            </div>
+            <!-- <form action="" id="form" class="formControl">
+                <label for="username">Username</label><br>
+                <input type="text" id="username" value placeholder="username"><br>
+                <label for="password">Password</label><br>
+                <input type="text" id="password" value placeholder="password"><br>
+                <input type="submit" id="submit" value="login">
+            </form>
+            <a href="" id="rePassword"> Forgot password?</a> -->
+        </body>
+    </html>

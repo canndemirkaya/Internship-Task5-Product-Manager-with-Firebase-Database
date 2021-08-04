@@ -1,0 +1,72 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  background-color: #0d1117;
+}
+.auth-form-header h1 {
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  color: #c9d1d9;
+}
+label{color:#c9d1d9;}
+.application-main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 20px;
+}
+.btn-block {
+  display: block;
+}
+.form-control {
+  display: block;
+}
+.auth-form .btn{margin-top:20px;}
+.auth-form-body {
+  border: 1px solid;
+  border-radius: 0 0 6px 6px;
+  padding: 20px;
+}
+.btn-primary{
+    background-color:#238636;
+    border-color:#238636;
+    box-shadow: inset;
+    color:#c9d1d9;
+}
+.form-control{
+    background-color: #0d1117;
+    border-color: #0d1117;
+    width:100%;
+    height:20px ;
+    padding-top:5px;
+    padding-bottom:5px;
+    color:#c9d1d9;
+}
+.btn{
+    width: 100%; 
+    height:32px;
+    font-size:14px;
+    letter-spacing: 0.5px;
+}
+.password a{
+    text-decoration: none;
+}
+.label-link{
+    float:right;
+    font-size:14px;
+}
+.auth-form-extend{  
+      border: 1px solid;
+      border-radius: 0 0 6px 6px;
+      padding: 10px 50px;
+      margin-top:28px;
+    }
+.auth-form-extend p{color:#c9d1d9;  color:#c9d1d9;}
+.register{
+  text-decoration:none; 
+}
+
+
+
