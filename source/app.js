@@ -24,34 +24,7 @@
     //firebase database tanımlandı.
     const database = firebase.database();
     const rootRef = database.ref('products');
-    
-    //data güncelleme kısmı
-    updateBtn.addEventListener('click', (e) =>{
-        e.preventDefault();
-        const newData={
-            productCode: productCode.value,
-            productName: productName.value,
-            categoryName: categoryName.value,
-            brandName: brandName.value,
-            price: price.value,
-        };
-        const updates = {};
-        updates['/products/'+productCode.value]=newData;
-        database.ref().update(updates);
-        location.href = './products.html'; //işlem sonrası gösterilen dosyaya gidiyor
-    });
-    //data silme işlemi gerçekleşmekte
-    removeBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        rootRef.child(productCode.value).remove()
-        .then(() => {
-            window.alert('ürün kodu veritabanından silindi')
-        });
-        // .catch(error => {
-        //     console.error(error);
-        // });
-    });
-    //tabloya ekleme işlemi
+        //tabloya ekleme işlemi
         rootRef.on('value', function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
                 var data = childSnapshot.val();
@@ -92,6 +65,33 @@
                 });
             });
         });
+    //data güncelleme kısmı
+    updateBtn.addEventListener('click', (e) =>{
+        e.preventDefault();
+        const newData={
+            productCode: productCode.value,
+            productName: productName.value,
+            categoryName: categoryName.value,
+            brandName: brandName.value,
+            price: price.value,
+        };
+        const updates = {};
+        updates['/products/'+productCode.value]=newData;
+        database.ref().update(updates);
+        location.href = './products.html'; //işlem sonrası gösterilen dosyaya gidiyor
+    });
+    //data silme işlemi gerçekleşmekte
+    removeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        rootRef.child(productCode.value).remove()
+        .then(() => {
+            window.alert('ürün kodu veritabanından silindi')
+        });
+        // .catch(error => {
+        //     console.error(error);
+        // });
+    });
+
     //data ekleme işlemi
     addBtn.addEventListener('click', (e) => {
         e.preventDefault();
